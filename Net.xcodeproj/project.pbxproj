@@ -8,8 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		950C2B202306D2ED0033C396 /* Net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950C2B162306D2ED0033C396 /* Net.framework */; };
-		950C2B252306D2ED0033C396 /* NetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B242306D2ED0033C396 /* NetTests.swift */; };
+		950C2B252306D2ED0033C396 /* NetMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B242306D2ED0033C396 /* NetMediaTests.swift */; };
 		950C2B272306D2ED0033C396 /* Net.h in Headers */ = {isa = PBXBuildFile; fileRef = 950C2B192306D2ED0033C396 /* Net.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		950C2B31230881B90033C396 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B30230881B90033C396 /* Request.swift */; };
+		950C2B33230882A20033C396 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B32230882A20033C396 /* RequestData.swift */; };
+		950C2B35230883810033C396 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B34230883810033C396 /* RequestDispatcher.swift */; };
+		950C2B382308852B0033C396 /* URLSessionRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B372308852B0033C396 /* URLSessionRequestDispatcher.swift */; };
+		950C2B3A230886C60033C396 /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B39230886C60033C396 /* NetError.swift */; };
+		950C2B3F23088C820033C396 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B3E23088C820033C396 /* Media.swift */; };
+		950C2B4123088CE80033C396 /* RequestMediaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B4023088CE80033C396 /* RequestMediaData.swift */; };
+		950C2B4323088CFD0033C396 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B4223088CFD0033C396 /* HTTPMethod.swift */; };
+		950C2B8B230B1D560033C396 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B8A230B1D560033C396 /* Logger.swift */; };
+		950C2B9F230B3F820033C396 /* GithubRepositorySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2B9E230B3F820033C396 /* GithubRepositorySearchRequest.swift */; };
+		950C2BA2230B3F910033C396 /* GithubSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2BA0230B3F910033C396 /* GithubSearchResult.swift */; };
+		950C2BA3230B3F910033C396 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2BA1230B3F910033C396 /* GithubRepository.swift */; };
+		950C2BA6230B40A40033C396 /* NetOnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C2BA5230B40A40033C396 /* NetOnlineTests.swift */; };
+		95608639230DA24500C6FE79 /* NetOfflineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95608638230DA24500C6FE79 /* NetOfflineTests.swift */; };
+		9560863C230DA58B00C6FE79 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560863B230DA58B00C6FE79 /* URLProtocolMock.swift */; };
+		9560863F230DB29A00C6FE79 /* rxswiftRepostitoryRequestResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 9560863E230DB29A00C6FE79 /* rxswiftRepostitoryRequestResult.json */; };
+		95608641230DE74B00C6FE79 /* GithubRepositorySearchRequestInvalidURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95608640230DE74B00C6FE79 /* GithubRepositorySearchRequestInvalidURL.swift */; };
+		95608643230DEA2B00C6FE79 /* ImgurMediaPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95608642230DEA2B00C6FE79 /* ImgurMediaPostRequest.swift */; };
+		95608645230DEB4300C6FE79 /* mockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 95608644230DEB4300C6FE79 /* mockImage.png */; };
+		95608647230F17E700C6FE79 /* ImgurImageUploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95608646230F17E600C6FE79 /* ImgurImageUploadResponse.swift */; };
+		9560864A230F240300C6FE79 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95608649230F240300C6FE79 /* Data+Extension.swift */; };
+		9560864C230F2B3700C6FE79 /* imgurImageUploadResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9560864B230F2B3700C6FE79 /* imgurImageUploadResponse.json */; };
+		9560864E230F3B1400C6FE79 /* ImgurMediaPostRequestInvalidURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560864D230F3B1400C6FE79 /* ImgurMediaPostRequestInvalidURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +50,31 @@
 		950C2B192306D2ED0033C396 /* Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Net.h; sourceTree = "<group>"; };
 		950C2B1A2306D2ED0033C396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950C2B1F2306D2ED0033C396 /* NetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		950C2B242306D2ED0033C396 /* NetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTests.swift; sourceTree = "<group>"; };
+		950C2B242306D2ED0033C396 /* NetMediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMediaTests.swift; sourceTree = "<group>"; };
 		950C2B262306D2ED0033C396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950C2B30230881B90033C396 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		950C2B32230882A20033C396 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		950C2B34230883810033C396 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
+		950C2B372308852B0033C396 /* URLSessionRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestDispatcher.swift; sourceTree = "<group>"; };
+		950C2B39230886C60033C396 /* NetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
+		950C2B3E23088C820033C396 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		950C2B4023088CE80033C396 /* RequestMediaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMediaData.swift; sourceTree = "<group>"; };
+		950C2B4223088CFD0033C396 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		950C2B8A230B1D560033C396 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		950C2B9E230B3F820033C396 /* GithubRepositorySearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositorySearchRequest.swift; sourceTree = "<group>"; };
+		950C2BA0230B3F910033C396 /* GithubSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchResult.swift; sourceTree = "<group>"; };
+		950C2BA1230B3F910033C396 /* GithubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		950C2BA5230B40A40033C396 /* NetOnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetOnlineTests.swift; sourceTree = "<group>"; };
+		95608638230DA24500C6FE79 /* NetOfflineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetOfflineTests.swift; sourceTree = "<group>"; };
+		9560863B230DA58B00C6FE79 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		9560863E230DB29A00C6FE79 /* rxswiftRepostitoryRequestResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rxswiftRepostitoryRequestResult.json; sourceTree = "<group>"; };
+		95608640230DE74B00C6FE79 /* GithubRepositorySearchRequestInvalidURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositorySearchRequestInvalidURL.swift; sourceTree = "<group>"; };
+		95608642230DEA2B00C6FE79 /* ImgurMediaPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurMediaPostRequest.swift; sourceTree = "<group>"; };
+		95608644230DEB4300C6FE79 /* mockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mockImage.png; sourceTree = "<group>"; };
+		95608646230F17E600C6FE79 /* ImgurImageUploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurImageUploadResponse.swift; sourceTree = "<group>"; };
+		95608649230F240300C6FE79 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		9560864B230F2B3700C6FE79 /* imgurImageUploadResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = imgurImageUploadResponse.json; sourceTree = "<group>"; };
+		9560864D230F3B1400C6FE79 /* ImgurMediaPostRequestInvalidURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurMediaPostRequestInvalidURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +117,17 @@
 		950C2B182306D2ED0033C396 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				95608648230F23E400C6FE79 /* Extension */,
 				950C2B192306D2ED0033C396 /* Net.h */,
 				950C2B1A2306D2ED0033C396 /* Info.plist */,
+				950C2B3E23088C820033C396 /* Media.swift */,
+				950C2B30230881B90033C396 /* Request.swift */,
+				950C2B32230882A20033C396 /* RequestData.swift */,
+				950C2B4023088CE80033C396 /* RequestMediaData.swift */,
+				950C2B4223088CFD0033C396 /* HTTPMethod.swift */,
+				950C2B3B2308878F0033C396 /* NetError */,
+				950C2B362308850E0033C396 /* Dispatchers */,
+				950C2B8A230B1D560033C396 /* Logger.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -80,10 +135,104 @@
 		950C2B232306D2ED0033C396 /* NetTests */ = {
 			isa = PBXGroup;
 			children = (
-				950C2B242306D2ED0033C396 /* NetTests.swift */,
+				950C2B9B230B3F580033C396 /* GithubAPI */,
+				950C2B242306D2ED0033C396 /* NetMediaTests.swift */,
+				950C2BA5230B40A40033C396 /* NetOnlineTests.swift */,
+				95608638230DA24500C6FE79 /* NetOfflineTests.swift */,
 				950C2B262306D2ED0033C396 /* Info.plist */,
 			);
 			path = NetTests;
+			sourceTree = "<group>";
+		};
+		950C2B362308850E0033C396 /* Dispatchers */ = {
+			isa = PBXGroup;
+			children = (
+				950C2B3D230887B30033C396 /* Abstract */,
+				950C2B3C230887A70033C396 /* Concrete */,
+			);
+			path = Dispatchers;
+			sourceTree = "<group>";
+		};
+		950C2B3B2308878F0033C396 /* NetError */ = {
+			isa = PBXGroup;
+			children = (
+				950C2B39230886C60033C396 /* NetError.swift */,
+			);
+			path = NetError;
+			sourceTree = "<group>";
+		};
+		950C2B3C230887A70033C396 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				950C2B372308852B0033C396 /* URLSessionRequestDispatcher.swift */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
+		950C2B3D230887B30033C396 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				950C2B34230883810033C396 /* RequestDispatcher.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		950C2B9B230B3F580033C396 /* GithubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9560863A230DA25300C6FE79 /* Mock */,
+				950C2B9D230B3F660033C396 /* Request */,
+				950C2B9C230B3F620033C396 /* Model */,
+			);
+			path = GithubAPI;
+			sourceTree = "<group>";
+		};
+		950C2B9C230B3F620033C396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				950C2BA0230B3F910033C396 /* GithubSearchResult.swift */,
+				950C2BA1230B3F910033C396 /* GithubRepository.swift */,
+				95608646230F17E600C6FE79 /* ImgurImageUploadResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		950C2B9D230B3F660033C396 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				950C2B9E230B3F820033C396 /* GithubRepositorySearchRequest.swift */,
+				95608640230DE74B00C6FE79 /* GithubRepositorySearchRequestInvalidURL.swift */,
+				95608642230DEA2B00C6FE79 /* ImgurMediaPostRequest.swift */,
+				9560864D230F3B1400C6FE79 /* ImgurMediaPostRequestInvalidURL.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		9560863A230DA25300C6FE79 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9560863D230DB26C00C6FE79 /* Data */,
+				9560863B230DA58B00C6FE79 /* URLProtocolMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		9560863D230DB26C00C6FE79 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9560864B230F2B3700C6FE79 /* imgurImageUploadResponse.json */,
+				95608644230DEB4300C6FE79 /* mockImage.png */,
+				9560863E230DB29A00C6FE79 /* rxswiftRepostitoryRequestResult.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		95608648230F23E400C6FE79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95608649230F240300C6FE79 /* Data+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +297,7 @@
 				TargetAttributes = {
 					950C2B152306D2ED0033C396 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					950C2B1E2306D2ED0033C396 = {
 						CreatedOnToolsVersion = 10.3;
@@ -184,6 +334,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9560864C230F2B3700C6FE79 /* imgurImageUploadResponse.json in Resources */,
+				9560863F230DB29A00C6FE79 /* rxswiftRepostitoryRequestResult.json in Resources */,
+				95608645230DEB4300C6FE79 /* mockImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950C2B31230881B90033C396 /* Request.swift in Sources */,
+				950C2B382308852B0033C396 /* URLSessionRequestDispatcher.swift in Sources */,
+				950C2B3F23088C820033C396 /* Media.swift in Sources */,
+				950C2B3A230886C60033C396 /* NetError.swift in Sources */,
+				950C2B8B230B1D560033C396 /* Logger.swift in Sources */,
+				950C2B4323088CFD0033C396 /* HTTPMethod.swift in Sources */,
+				950C2B35230883810033C396 /* RequestDispatcher.swift in Sources */,
+				9560864A230F240300C6FE79 /* Data+Extension.swift in Sources */,
+				950C2B33230882A20033C396 /* RequestData.swift in Sources */,
+				950C2B4123088CE80033C396 /* RequestMediaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950C2B252306D2ED0033C396 /* NetTests.swift in Sources */,
+				95608643230DEA2B00C6FE79 /* ImgurMediaPostRequest.swift in Sources */,
+				950C2BA3230B3F910033C396 /* GithubRepository.swift in Sources */,
+				950C2B9F230B3F820033C396 /* GithubRepositorySearchRequest.swift in Sources */,
+				95608641230DE74B00C6FE79 /* GithubRepositorySearchRequestInvalidURL.swift in Sources */,
+				9560864E230F3B1400C6FE79 /* ImgurMediaPostRequestInvalidURL.swift in Sources */,
+				950C2B252306D2ED0033C396 /* NetMediaTests.swift in Sources */,
+				950C2BA6230B40A40033C396 /* NetOnlineTests.swift in Sources */,
+				95608647230F17E700C6FE79 /* ImgurImageUploadResponse.swift in Sources */,
+				950C2BA2230B3F910033C396 /* GithubSearchResult.swift in Sources */,
+				9560863C230DA58B00C6FE79 /* URLProtocolMock.swift in Sources */,
+				95608639230DA24500C6FE79 /* NetOfflineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +514,7 @@
 		950C2B2B2306D2ED0033C396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,9 +529,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.fclement.Net;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.fclement.net;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +541,7 @@
 		950C2B2C2306D2ED0033C396 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -380,7 +556,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.fclement.Net;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.fclement.net;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,6 +567,7 @@
 		950C2B2E2306D2ED0033C396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVKR297KU7;
 				INFOPLIST_FILE = NetTests/Info.plist;
@@ -409,6 +586,7 @@
 		950C2B2F2306D2ED0033C396 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVKR297KU7;
 				INFOPLIST_FILE = NetTests/Info.plist;
