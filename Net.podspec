@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
+  spec.platform     = :ios, "10.0"
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/franckclement/Net.git", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/franckclement/Net.git", :tag => "#{spec.version}" }
 
 
 
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Net/**/*.{h,m,swift}", "Net/*.{h,m,swift}"
+  spec.source_files  = "Net/**/*.{h, m, swift}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
