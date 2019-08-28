@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: Netw.xcodeproj
+scheme: Netw
+output_directory: reports
+ignore:
+  - NetwTests/*
