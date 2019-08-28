@@ -8,4 +8,4 @@ env:
     - TEST_SDK=iphonesimulator12.4 OS=12.4 NAME='iPhone XS'
 
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SwiftyLib.xcodeproj -scheme SwiftyLib -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project Netw.xcodeproj -scheme Netw -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
