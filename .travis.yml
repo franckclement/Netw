@@ -7,6 +7,9 @@ env:
     - TEST_SDK=iphonesimulator12.4 OS=12.4 NAME='iPhone 7'
     - TEST_SDK=iphonesimulator12.4 OS=12.4 NAME='iPhone XS'
 
+before_install: rvm use $RVM_RUBY_VERSION
+install: bundle install --without=documentation --path ../travis_bundle_dir
+
 script:
   - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project Netw.xcodeproj -scheme Netw -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
 
