@@ -29,6 +29,13 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Netw` by adding it to
 pod 'Netw'
 ```
 
+#### Carthage
+Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/Netw.framework` to an iOS project.
+
+```
+github "franckclement/Netw"
+```
+
 ## Usage example
 
 ### 1) Create a `Request` struct with your request settings
