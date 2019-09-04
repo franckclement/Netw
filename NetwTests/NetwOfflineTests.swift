@@ -26,11 +26,17 @@ import XCTest
 @testable import Netw
 
 class NetwOfflineTests: XCTestCase {
-
-    override func setUp() {
-        // Set up a configuration to use our mock
-        let config = URLSessionConfiguration.default
-        config.protocolClasses = [URLProtocolMock.self]
+    
+    /// This is the session configuration used to bypass actual networking call through URLProtocolMock
+    /// and make URLSession returns the provided data from `URLProtocolMock.testURLs` for the given URL
+    private var mockedSessionConfiguration: URLSessionConfiguration {
+        let ephemeralSession = URLSessionConfiguration.ephemeral
+        ephemeralSession.protocolClasses = [URLProtocolMock.self]
+        return ephemeralSession
+    }
+    
+    override func tearDown() {
+        URLProtocolMock.testURLs = [:]
     }
 
     private func getMockedDataFromBundle(forResource: String, withExtension: String) -> Data {
@@ -48,7 +54,8 @@ class NetwOfflineTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Request RxSwift query on Github's repositories API")
         
         // Make the request
-        let repositoryRequest = GithubRepositorySearchRequest(queryRequest: "RxSwift")
+        let repositoryRequest = GithubRepositorySearchRequest(queryRequest: "RxSwift",
+                                                              sessionConfiguration: mockedSessionConfiguration)
         _ = repositoryRequest.execute(completion: { result in
             switch result {
             case .success(let response):
@@ -65,15 +72,41 @@ class NetwOfflineTests: XCTestCase {
         wait(for: [expectation], timeout: 5.0)
     }
     
+    func testSearchMockedRepositoryRequestWithMalformedJSONResponse() {
+        
+        URLProtocolMock.testURLs = [URL(string: "https://api.github.com/search/repositories?q=RxSwift")!: getMockedDataFromBundle(forResource: "MALFORMEDrxswiftRepostitoryRequestResult", withExtension: "json")]
+        
+        // Create an expectation for a background download task.
+        let expectation = XCTestExpectation(description: "Request RxSwift query on Github's repositories API")
+        
+        // Make the request
+        let repositoryRequest = GithubRepositorySearchRequest(queryRequest: "RxSwift",
+                                                              sessionConfiguration: mockedSessionConfiguration)
+        _ = repositoryRequest.execute(completion: { result in
+            switch result {
+            case .success(let response):
+                XCTAssertNotNil(response)
+                XCTFail()
+                break
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                expectation.fulfill()
+                break
+            }
+        })
+        
+        wait(for: [expectation], timeout: 5.0)
+    }
     
-    func testImageUpload() {
+    
+    func testImageUploadMocked() {
         
         URLProtocolMock.testURLs = [URL(string: "https://api.imgur.com/3/upload")!: getMockedDataFromBundle(forResource: "imgurImageUploadResponse", withExtension: "json")]
         
         // Create an expectation for a background download task.
         let expectation = XCTestExpectation(description: "Post image to imgur upload API")
         
-        let imgurMediaPostRequest = ImgurMediaPostRequest()
+        let imgurMediaPostRequest = ImgurMediaPostRequest(sessionConfiguration: mockedSessionConfiguration)
         _ = imgurMediaPostRequest.execute(completion: { result in
             switch result {
             case .success(let response):
@@ -83,6 +116,30 @@ class NetwOfflineTests: XCTestCase {
             case .failure(let error):
                 XCTAssertNotNil(error)
                 XCTFail()
+                break
+            }
+        })
+        
+        wait(for: [expectation], timeout: 3.0)
+    }
+    
+    func testImageUploadMockedWithMalformedJSONResponse() {
+        
+        URLProtocolMock.testURLs = [URL(string: "https://api.imgur.com/3/upload")!: getMockedDataFromBundle(forResource: "MALFORMEDimgurImageUploadResponse", withExtension: "json")]
+        
+        // Create an expectation for a background download task.
+        let expectation = XCTestExpectation(description: "Post image to imgur upload API")
+        
+        let imgurMediaPostRequest = ImgurMediaPostRequest(sessionConfiguration: mockedSessionConfiguration)
+        _ = imgurMediaPostRequest.execute(completion: { result in
+            switch result {
+            case .success(let response):
+                XCTAssertNotNil(response)
+                XCTFail()
+                break
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                expectation.fulfill()
                 break
             }
         })

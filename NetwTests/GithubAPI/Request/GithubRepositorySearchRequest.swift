@@ -29,21 +29,19 @@ struct GithubRepositorySearchRequest: Request {
     typealias Response = GithubSearchResults<GithubRepository>
     
     let queryRequest: String
+    let sessionConfiguration: URLSessionConfiguration?
     
     var data: DataType {
-        
-        let mockedSessionConfiguration = URLSessionConfiguration.ephemeral
-        mockedSessionConfiguration.protocolClasses = [URLProtocolMock.self]
-        
         let data = RequestData(path: "https://api.github.com/search/repositories",
                                method: .get,
                                queryParams: ["q": queryRequest],
-                               sessionConfiguration: mockedSessionConfiguration)
+                               sessionConfiguration: sessionConfiguration ?? URLSessionConfiguration.default)
         
         return DataType.standard(data: data)
     }
     
-    init(queryRequest: String) {
+    init(queryRequest: String, sessionConfiguration: URLSessionConfiguration? = nil) {
         self.queryRequest = queryRequest
+        self.sessionConfiguration = sessionConfiguration
     }
 }

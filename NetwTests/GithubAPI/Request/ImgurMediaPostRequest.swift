@@ -28,10 +28,9 @@ import Netw
 struct ImgurMediaPostRequest: Request {
     typealias Response = ImgurImageUploadResponse
     
+    let sessionConfiguration: URLSessionConfiguration?
+    
     var data: DataType {
-        
-        let mockedSessionConfiguration = URLSessionConfiguration.ephemeral
-        mockedSessionConfiguration.protocolClasses = [URLProtocolMock.self]
         
         let bundle = Bundle.init(for: NetwOnlineTests.self)
         let image = UIImage(named: "mockImage", in: bundle, compatibleWith: nil)!
@@ -42,8 +41,12 @@ struct ImgurMediaPostRequest: Request {
         
         let data = RequestMediaData(path: "https://api.imgur.com/3/upload",
                                     medias: [media],
-                                    sessionConfiguration: mockedSessionConfiguration)
+                                    sessionConfiguration: sessionConfiguration ?? URLSessionConfiguration.default)
         
         return DataType.media(data: data)
+    }
+    
+    init(sessionConfiguration: URLSessionConfiguration? = nil) {
+        self.sessionConfiguration = sessionConfiguration
     }
 }
